@@ -36,7 +36,7 @@ const SignUp = () => {
 
         try {
             const response = await axios.post(
-                "https://localhost:8080/api/v1/owner",
+                "http://localhost:8080/api/v1/owner",
                 {
                     ownerName,
                     password,

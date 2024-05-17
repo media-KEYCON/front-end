@@ -105,7 +105,7 @@ export default function Pointpopup({ onClose, onRegister }) {
         try {
             // 백엔드 API 호출
             const response = await axios.post(
-                "https://localhost:8080/api/v1/customers", // API 엔드포인트 주소
+                "http://localhost:8080/api/v1/customers", // API 엔드포인트 주소
                 requestData
             );
 

@@ -34,7 +34,7 @@ export default function Login() {
 
         try {
             const response = await axios.post(
-                "https://localhost:8080/api/v1/owner/login",
+                "http://localhost:8080/api/v1/owner/login",
                 {
                     ownerName: nickname,
                     password,

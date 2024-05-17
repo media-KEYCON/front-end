@@ -81,7 +81,7 @@ export function MasonryMenuContainer({ cartMenu, setCartMenu, onUpdatePrice }) {
         const ownerId = localStorage.getItem("userId"); // ownerId(userId)값 localStorage에서 받기
         // console.log(`owrnerId: ${ownerId}`);
         axios
-            .get(`https://localhost:8080/api/v1/category/all/${ownerId}`)
+            .get(`http://localhost:8080/api/v1/category/all/${ownerId}`)
             .then((response) => {
                 // 요청이 성공적으로 완료되었을 때 실행되는 코드
                 // console.log(response.data); // 서버로부터 받은 데이터 출력
