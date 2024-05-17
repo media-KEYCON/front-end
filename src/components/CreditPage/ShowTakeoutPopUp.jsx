@@ -22,7 +22,7 @@ export default function ShowTakeoutPopUp({ onShowFirstPopUp, PaymentCancel }) {
 
         // API 요청을 보내는 코드
         axios
-            .post(`https://localhost:8080/api/v1/orders`, {
+            .post(`http://localhost:8080/api/v1/orders`, {
                 takeOut: takeOut,
                 cartId: cartId,
             })

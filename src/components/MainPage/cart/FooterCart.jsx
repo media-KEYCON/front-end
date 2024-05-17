@@ -38,7 +38,7 @@ export default function FooterCart({
             if (updatedCart.length > 0) {
                 try {
                     // const res = await axios.put(
-                    await axios.put(`https://localhost:8080/api/v1/cart`, {
+                    await axios.put(`http://localhost:8080/api/v1/cart`, {
                         cartId: Number(cartId),
                         orderMenuUpdateRequestDtoList: updatedCart,
                     });
@@ -71,7 +71,7 @@ export default function FooterCart({
         const cartId = localStorage.getItem("cartId");
         try {
             const response = await axios.get(
-                `https://localhost:8080/api/v1/cart/${cartId}`
+                `http://localhost:8080/api/v1/cart/${cartId}`
             );
             //const totalPrice = response.data.responseData.totalPrice;
             // localStorage.setItem("totalPrice", totalPrice); // Store orderId in localStorage

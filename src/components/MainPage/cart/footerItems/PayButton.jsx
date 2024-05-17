@@ -53,7 +53,7 @@ export default function PayButton({ updatedCart }) {
         const cartId = localStorage.getItem("cartId");
         try {
             await axios
-                .put(`https://localhost:8080/api/v1/cart`, {
+                .put(`http://localhost:8080/api/v1/cart`, {
                     cartId: Number(cartId),
                     orderMenuUpdateRequestDtoList: updatedCart,
                 })

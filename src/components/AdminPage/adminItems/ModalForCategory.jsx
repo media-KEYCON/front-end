@@ -19,7 +19,7 @@ export const AddCategoryModal = ({ onClose, ownerId, onAddCategory }) => {
         try {
             //const response = await axios.post(
             await axios.post(
-                `https://localhost:8080/api/v1/category/${ownerId}`,
+                `http://localhost:8080/api/v1/category/${ownerId}`,
                 {
                     categoryName: categoryName,
                 }
@@ -66,7 +66,7 @@ export const EditCategoryModal = ({
         try {
             // 수정된 카테고리 정보를 백엔드로 전송
             await axios.put(
-                `https://localhost:8080/api/v1/category/${selectedCategoryId}`,
+                `http://localhost:8080/api/v1/category/${selectedCategoryId}`,
                 {
                     categoryName: newCategoryName,
                 }
@@ -105,7 +105,7 @@ export const DeleteCategoryModal = ({
     const handleDeleteCategory = async () => {
         try {
             await axios.delete(
-                `https://localhost:8080/api/v1/category/${categoryId}`
+                `http://localhost:8080/api/v1/category/${categoryId}`
             );
             // console.log(`${categoryName}(id=${categoryId})가 삭제되었습니다.`);
             onClose();

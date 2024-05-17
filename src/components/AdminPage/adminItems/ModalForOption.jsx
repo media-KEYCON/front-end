@@ -39,7 +39,7 @@ export const AddOptionModal = ({ onClose, menusId, onAddOption }) => {
         try {
             //const response = await axios.post(
             await axios.post(
-                `https://localhost:8080/api/v1/menuoptions/${menusId}`,
+                `http://localhost:8080/api/v1/menuoptions/${menusId}`,
                 {
                     menuOptionsCategory: optionGroup,
                     menuOptionsContents: optionName,
@@ -148,7 +148,7 @@ export const EditOptionModal = ({
             };
 
             const response = await axios.put(
-                `https://localhost:8080/api/v1/menuoptions/${selectedOptionId}`,
+                `http://localhost:8080/api/v1/menuoptions/${selectedOptionId}`,
                 updatedOptionData
             );
 
@@ -217,7 +217,7 @@ export const DeleteOptionModal = ({
     const handleDeleteOption = async () => {
         try {
             const response = await axios.delete(
-                `https://localhost:8080/api/v1/menuoptions/${selectedOptionId}`
+                `http://localhost:8080/api/v1/menuoptions/${selectedOptionId}`
             );
 
             // console.log("옵션 삭제됨:", response.data);

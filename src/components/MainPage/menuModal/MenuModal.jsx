@@ -139,7 +139,7 @@ export default function MenuModal({
     useEffect(() => {
         //api/v1/menus/{menusId}
         axios
-            .get(`https://localhost:8080/api/v1/menus/${menusId}`)
+            .get(`http://localhost:8080/api/v1/menus/${menusId}`)
             .then((response) => {
                 // 요청이 성공적으로 완료되었을 때 실행되는 코드
                 // console.log(response.data); // 서버로부터 받은 데이터 출력
@@ -212,7 +212,7 @@ export default function MenuModal({
 
             //서버로 전송하기
             axios
-                .post(`https://localhost:8080/api/v1/cart`, cart, config)
+                .post(`http://localhost:8080/api/v1/cart`, cart, config)
                 .then((response) => {
                     if (response.status === 200) {
                         const cartId = response.data.responseData.cartId;
@@ -221,7 +221,7 @@ export default function MenuModal({
 
                         axios
                             .get(
-                                `https://localhost:8080/api/v1/cart/${cartId}`,
+                                `http://localhost:8080/api/v1/cart/${cartId}`,
                                 config
                             )
                             .then((response) => {

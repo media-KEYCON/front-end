@@ -42,7 +42,7 @@ export default function AdminOption() {
     const getOptions = async () => {
         try {
             const response = await axios.get(
-                `https://localhost:8080/api/v1/menus/${menusId}`
+                `http://localhost:8080/api/v1/menus/${menusId}`
             );
             // console.log(response);
             return response.data.responseData;

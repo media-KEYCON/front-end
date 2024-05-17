@@ -33,7 +33,7 @@ export const AddMenuModal = ({ onClose, categoryId, onAddMenu }) => {
         try {
             // const response = await axios.post(
             await axios.post(
-                `https://localhost:8080/api/v1/menus/${categoryId}`,
+                `http://localhost:8080/api/v1/menus/${categoryId}`,
                 {
                     menusName: menuName,
                     menusPrice: menuPrice,
@@ -111,7 +111,7 @@ export const EditMenuModal = ({
     const handleEditMenu = async () => {
         try {
             await axios.put(
-                `https://localhost:8080/api/v1/menus/${selectedMenuId}`,
+                `http://localhost:8080/api/v1/menus/${selectedMenuId}`,
                 {
                     menusName: menuData.name,
                     menusPrice: menuData.price,
@@ -185,7 +185,7 @@ export const EditCategoryModal = ({
     const handleSave = async () => {
         try {
             await axios.put(
-                `https://localhost:8080/api/v1/category/${selectedCategoryId}`, // 수정된 URL
+                `http://localhost:8080/api/v1/category/${selectedCategoryId}`, // 수정된 URL
                 {
                     categoryName: newCategoryName, // 요청 본문에 categoryName 추가
                 }
@@ -222,9 +222,7 @@ export const DeleteMenuModal = ({ menusId, onClose, onDelete }) => {
     const handleDeleteMenu = async () => {
         try {
             setIsDeleting(true);
-            await axios.delete(
-                `https://localhost:8080/api/v1/menus/${menusId}`
-            );
+            await axios.delete(`http://localhost:8080/api/v1/menus/${menusId}`);
 
             onDelete(menusId);
             onClose();

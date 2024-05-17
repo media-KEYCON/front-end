@@ -49,7 +49,7 @@ export default function AdminMenu() {
     const getMenus = async () => {
         try {
             const response = await axios.get(
-                `https://localhost:8080/api/v1/category/${categoryId}`
+                `http://localhost:8080/api/v1/category/${categoryId}`
             );
             // console.log(response);
             return response.data.responseData;
